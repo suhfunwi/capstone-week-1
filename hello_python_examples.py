@@ -63,17 +63,36 @@ print(data)
 # makes a new list with 10 zeros in it
 
 # while loops
-name = input('Enter your name')
-# while len(name) == 0:
-# this is a shorter version
-while not name:
-    print('Please enter something')
-    name = input('Enter your name')
+# name = input('Enter your name: ')
+# # while len(name) == 0:
+# # this is a shorter version
+# while not name:
+#     print('Please enter something')
+#     name = input('Enter your name: ')
 
 #True and False and None
+start_of_semester = True
+winter = False
 
+if winter:
+    # blank is a boolean, t or f
+    print('brr!')
+else:
+    print('It is not winter')
 #  Dictionaries
+class_codes = {2905: 'Capstone', 2560: 'Web', 2545: 'Java'}
+# key value pairs must be unique so they can be identified
+print(class_codes[2560])
 
+for code in class_codes:
+    print(code)
+    print(class_codes[code])
+#     prints both the key and value over a loop
+
+for code, name for class_codes.items():
+    print('The class code is' +str(code))
 # Slicing strings, lists
 
 # File ID
+
+# Functions
