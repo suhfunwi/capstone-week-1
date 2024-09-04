@@ -70,7 +70,7 @@ print(data)
 #     print('Please enter something')
 #     name = input('Enter your name: ')
 
-#True and False and None
+# True and False and None
 start_of_semester = True
 winter = False
 
@@ -89,10 +89,55 @@ for code in class_codes:
     print(class_codes[code])
 #     prints both the key and value over a loop
 
-for code, name for class_codes.items():
-    print('The class code is' +str(code))
-# Slicing strings, lists
+for code, name in class_codes.items():
+    print(f'The class code is {code}   and the name is {name}')
 
-# File ID
+    # print('The class code is ' +str(code) + ' and the name is ' + name)
+#     python doesn't allow concatenating strings to integers
+#     to make it a bit tidier use format strings(f)
+#     and place it at the start of the string then
+#     use curly braces for the variables
+
+# Slicing strings, lists
+schools = ['MCTC', 'DCTC', 'NDSU']
+# first_two = schools[0:2]
+first_two = schools[:2]
+# small shortcut is omitting the first number so it automatically starts at the beginning
+print(first_two)
+# slices the list, so it only prints up to the 2nd index,
+# meaning it prints index 0 and 1
+last_school = schools[-1]
+print(last_school)
+# negative numbers are a small shortcut to get the last position in a list
+last_two_schools = schools[-2:]
+# to get multiple, specify where to start and if the end is empty,
+# will automatically go to the end of the list
+print(last_two_schools)
+school_name = 'Minneapolis Community and Technical College'
+city = school_name[:11]
+print(city)
+# slicing strings works the same way for lists,
+# just that the indexes are for individual letters
+
+# File IO(input/output)
+with open('data.txt') as f:
+    print(f.read())
+#     code won't work because we don't have a file named data.txt,
+#     but what would happen is that it reads it and prints it out
+# update: added a data.txt filem and it does work now
+with open('schools.txt', 'w') as f:
+        f.writelines(schools)
+#     this writes the schools list into the schools.txt file
 
 # Functions
+
+
+def get_name():
+    # define the function with def
+    print('Hello, please enter your name!')
+    username = input('Your name is: ')
+    return username
+# don't forget to return the value of the function at the end
+
+
+name = get_name()
